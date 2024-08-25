@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Reports</title>
+</head>
+<body>
+    <h1>Incident Reports</h1>
+    <ul>
+        <% incidents.forEach(incident => { %>
+            <li>
+                <strong>Title:</strong> <%= incident.title %><br>
+                <strong>Summary:</strong> <%= incident.summary %><br>
+                <strong>Link:</strong> <a href="<%= incident.link %>"><%= incident.link %></a><br>
+                <strong>Date:</strong> <%= incident.date %><br>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
